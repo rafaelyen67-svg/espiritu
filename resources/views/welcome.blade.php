@@ -1,99 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lyrics Player</title>
-  <style>
-    :root {
-      --bg-color: #0f172a;
-      --card-bg: #1e293b;
-      --text-active: #ffffff;
-      --text-muted: #64748b;
-      --accent: #38bdf8;
-    }
+<x-layout title="Home - Welcome">
+    <div class="text-center max-w-3xl mx-auto space-y-6">
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-400 bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">
+            Welcome to the App
+        </span>
 
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      background-color: var(--bg-color);
-      font-family: system-ui, -apple-system, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+            Build something extraordinary today.
+        </h1>
 
-    .lyrics-container {
-      width: 90%;
-      max-width: 480px;
-      background: var(--card-bg);
-      border-radius: 16px;
-      padding: 32px 24px;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-    }
+        <p class="text-slate-400 text-lg sm:text-xl leading-relaxed">
+            Your centralized platform for web apps, music sync, and clean modern interfaces. Everything you need wrapped in a lightweight, responsive design.
+        </p>
 
-    .song-info {
-      margin-bottom: 32px;
-      border-bottom: 1px solid #334155;
-      padding-bottom: 16px;
-    }
-
-    .song-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #f8fafc;
-      margin: 0 0 4px 0;
-    }
-
-    .artist-name {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin: 0;
-    }
-
-    .lyrics {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .line {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    /* Active line highlight */
-    .line.active {
-      color: var(--text-active);
-      font-size: 1.3rem;
-      text-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
-    }
-
-    .line:hover {
-      color: var(--accent);
-    }
-  </style>
-</head>
-<body>
-
-  <div class="lyrics-container">
-    <div class="song-info">
-      <h2 class="song-title">Song Title</h2>
-      <p class="artist-name">Artist Name</p>
+        <div class="pt-4 flex items-center justify-center space-x-4">
+            <a href="/about" class="px-6 py-3.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold shadow-lg shadow-sky-500/20 transition transform active:scale-95">
+                Learn More
+            </a>
+            <a href="/contact" class="px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-200 font-semibold transition">
+                Get in Touch
+            </a>
+        </div>
     </div>
-
-    <div class="lyrics">
-      <p class="line">First line of the verse goes here</p>
-      <p class="line">Second line coming right after</p>
-      <p class="line active">This is the current line being sung</p>
-      <p class="line">Next line waiting in sequence</p>
-      <p class="line">And the final line of the section</p>
-    </div>
-  </div>
-
-</body>
-</html>
+</x-layout>
